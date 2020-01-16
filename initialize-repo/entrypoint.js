@@ -3,7 +3,7 @@ const GitHub = require('@octokit/rest')
 
 const tools = new Toolkit()
 
-tools.log.info('token', process.env.ADMIN_TOKEN)
+console.log('token', process.env.ADMIN_TOKEN)
 const github = new GitHub({auth: process.env.ADMIN_TOKEN})
 
 if (process.env.DEBUG === 'true') debug()
