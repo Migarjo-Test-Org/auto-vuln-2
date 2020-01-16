@@ -31,5 +31,5 @@ jobs:
       - name: Initialize Repo
         uses: ./initialize-repo
         env:
-          ADMIN_TOKEN: secrets.adminToken
+          ADMIN_TOKEN: ${{ secrets.adminToken }}
 
