@@ -2,8 +2,6 @@ const {Toolkit} = require('actions-toolkit')
 const GitHub = require('@octokit/rest')
 
 const tools = new Toolkit()
-
-console.log('token', process.env.ADMIN_TOKEN)
 const github = new GitHub({auth: process.env.ADMIN_TOKEN})
 
 if (process.env.DEBUG === 'true') debug()
