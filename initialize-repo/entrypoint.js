@@ -10,7 +10,7 @@ enableVulnerabilityScanning()
 
 async function enableVulnerabilityScanning() {
   return checkStatus(
-    await tools.github.repos.enableVulnerabilityAlerts({
+    await github.repos.enableVulnerabilityAlerts({
       owner: tools.context.payload.organization.login,
       repo: tools.context.payload.repository.name
   }))
