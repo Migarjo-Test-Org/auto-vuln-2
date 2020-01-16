@@ -4,7 +4,7 @@ const tools = new Toolkit()
 
 if (process.env.DEBUG === 'true') debug()
 
-console.log(tools.context.repository)
+console.log(tools.context)
 
 /**
  * Apply an assignee to the issue in this action.
