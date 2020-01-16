@@ -2,23 +2,9 @@ const {Toolkit} = require('actions-toolkit')
 
 const tools = new Toolkit()
 
-const commands = {
-  assign: doAssign,
-  comment: doComment,
-  label: doLabel
-}
-
-const command = tools.arguments._[0]
 if (process.env.DEBUG === 'true') debug()
 
-commands[command](tools.arguments)
-  .then(() => {
-    tools.exit.success('action successful')
-  })
-  .catch(err => {
-    tools.log.fatal(err)
-    tools.exit.failure('action failed')
-  })
+tools.log.info('Hello World!)
 
 /**
  * Apply an assignee to the issue in this action.
