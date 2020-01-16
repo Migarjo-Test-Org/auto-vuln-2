@@ -23,22 +23,11 @@ jobs:
     # Name the Job
     name: Services-Toolbox stack linter
     # Set the agent to run on
-    runs-on: self-hosted
-    ##################
-    # Load all steps #
-    ##################
+    runs-on: ubuntu-latest
     steps:
-      ##########################
-      # Checkout the code base #
-      ##########################
       - name: Checkout Code
         uses: actions/checkout@master
 
-      ################################
-      # Run Linter against code base #
-      ################################
-      - name: Lint Code Base
-        uses: docker://admiralawkbar/super-linter:latest
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          VALIDATE_ANSIBLE: false
+      - name: Initialize Repo
+        uses: ./initialize-repo
+
