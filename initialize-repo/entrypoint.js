@@ -4,7 +4,7 @@ const tools = new Toolkit()
 
 if (process.env.DEBUG === 'true') debug()
 
-console.log('Payload:',tools.context.payload)
+enableVulnerabilityScanning()
 
 async function enableVulnerabilityScanning() {
   return checkStatus(
