@@ -9,7 +9,6 @@ LABEL "com.github.actions.description"="An action for doing things on GitHub rep
 LABEL "com.github.actions.icon"="briefcase"
 LABEL "com.github.actions.color"="gray-dark"
 
-COPY *.md /
 COPY package*.json ./
 
 RUN npm ci
