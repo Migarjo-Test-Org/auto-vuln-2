@@ -4,7 +4,15 @@ const tools = new Toolkit()
 
 if (process.env.DEBUG === 'true') debug()
 
-console.log(tools.context)
+console.log('Payload:',tools.context.payload)
+
+async function enableVulnerabilityScanning() {
+  return checkStatus(
+    await tools.github.repos.enableVulnerabilityAlerts({
+      owner: tools.context.payload.organization.login,
+      repo: tools.context.payload.repository.name
+  }))
+}
 
 /**
  * Apply an assignee to the issue in this action.
