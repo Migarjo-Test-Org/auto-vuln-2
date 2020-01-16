@@ -25,11 +25,11 @@ jobs:
     # Set the agent to run on
     runs-on: ubuntu-latest
     steps:
-      - env:
-          ADMIN_TOKEN: secrets.adminToken
       - name: Checkout Code
         uses: actions/checkout@master
 
       - name: Initialize Repo
         uses: ./initialize-repo
+        env:
+          ADMIN_TOKEN: secrets.adminToken
 
